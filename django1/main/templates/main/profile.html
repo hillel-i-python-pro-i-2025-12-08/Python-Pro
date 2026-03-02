@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+    <p>Name: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    {% if login_time and user_ip %}
+        <p>Joined: {{ login_time }}</p>
+        <p>IP Address: {{ user_ip }}</p>
+    {% else %}
+        <p>No login record found.</p>
+    {% endif %}
+</body>
+</html>
